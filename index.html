@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b16">
+  <meta name="description" content="پورتفولیوی متین؛ توسعه‌دهنده جونیور فول‌استک در مسیر یادگیری و ساخت پروژه‌های واقعی.">
+  <title>متین | توسعه‌دهنده جونیور فول‌استک</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- پس‌زمینه و نوار پیشرفت -->
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <!-- ==================== پس‌زمینه ویدیویی لایتنینگ ==================== -->
+  <div class="video-background" aria-hidden="true">
+    <video id="lightningVideo" class="video-background__video" autoplay muted loop playsinline preload="metadata">
+      <source src="assets/lightfall-1789335179430.webm" type="video/webm">
+    </video>
+    <div class="video-background__overlay"></div>
+    <div class="video-background__vignette"></div>
+  </div>
+  <!-- ==================== لایه‌های بصری و موس ==================== -->
+  <div class="fx-background" aria-hidden="true"><div class="fx-grid"></div><div class="fx-noise"></div><div class="fx-scanlines"></div><div class="fx-particles"></div></div>
+  <div class="cursor-ring" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- ناوبری اصلی -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="بازگشت به ابتدای سایت">
+        <span class="brand__mark">M</span><span>متین<span class="brand__dot">.</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="ناوبری اصلی">
+        <a class="nav__link is-active" href="#home">خانه</a>
+        <a class="nav__link" href="#about">درباره من</a>
+        <a class="nav__link" href="#skills">مهارت‌ها</a>
+        <a class="nav__link" href="#projects">پروژه‌ها</a>
+        <a class="nav__link" href="#build">چه می‌سازم؟</a>
+        <a class="nav__link" href="#contact">تماس</a>
+      </nav>
+      <div class="header__actions">
+        <button class="search-trigger" id="searchTrigger" type="button" aria-haspopup="dialog">
+          <span aria-hidden="true">⌕</span><span>جستجو</span><kbd>Ctrl K</kbd>
+        </button>
+        <a class="btn btn--small btn--primary" href="#contact">ارتباط با من</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="باز کردن منو">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- هیرو -->
+    <section class="hero section" id="home">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <div class="status-pill"><span></span> آماده برای یادگیری، همکاری و پروژه‌های جدید</div>
+          <p class="eyebrow">سلام، من متینم.</p>
+          <h1>توسعه‌دهنده <span>Junior Full-Stack</span> در مسیر ساختن چیزهای واقعی.</h1>
+          <p class="hero__lead">وب‌سایت‌ها و اپلیکیشن‌های کاربردی می‌سازم، تجربه کسب می‌کنم و هر پروژه را یک قدم برای بهتر شدن می‌دانم.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary magnetic" href="#projects">مشاهده پروژه‌ها <b>←</b></a>
+            <a class="btn btn--ghost magnetic" href="#contact">ارتباط با من</a>
+          </div>
+          <div class="stats" aria-label="خلاصه فعالیت">
+            <div><strong id="projectCount">0</strong><span>پروژه نمونه</span></div>
+            <div><strong>۶</strong><span>تکنولوژی اصلی</span></div>
+            <div><strong>∞</strong><span>یادگیری و ساختن</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal--delay" aria-hidden="true">
+          <div class="code-window glass">
+            <div class="window-bar"><span></span><span></span><span></span><b>developer.js</b></div>
+            <pre><code id="heroCode"></code><i></i></pre>
+          </div>
+          <div class="floating-card floating-card--one">Python <small>Backend</small></div>
+          <div class="floating-card floating-card--two">Django <small>Web</small></div>
+          <div class="floating-card floating-card--three">JavaScript <small>Frontend</small></div>
+          <div class="hero-orbit"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- درباره من -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">درباره من</p><h2>جونیورم؛ ولی جدی در حال ساختنم.</h2><p>هدف این سایت نمایش مسیر واقعی رشد من است، نه بزرگ‌نمایی مهارت‌ها.</p></div>
+        <div class="about-grid">
+          <article class="about-copy glass reveal">
+            <p>من یک <strong>توسعه‌دهنده جونیور</strong> هستم که در ابتدای مسیر حرفه‌ای توسعه نرم‌افزار قرار دارم و روی مهارت‌های فرانت‌اند و بک‌اند کار می‌کنم.</p>
+            <p>بیشتر با <strong>Python، Django، JavaScript، HTML و CSS</strong> تمرین می‌کنم و بهترین روش یادگیری برایم ساختن پروژه‌های واقعی است.</p>
+            <p>اینجا قرار نیست وانمود کنم که سال‌ها تجربه دارم؛ می‌خواهم چیزی را که واقعاً ساخته‌ام، چالش‌هایی که داشته‌ام و چیزهایی که یاد گرفته‌ام شفاف نشان بدهم.</p>
+          </article>
+          <aside class="about-card glass reveal reveal--delay">
+            <div class="avatar">M</div><h3>متین</h3><p>Junior Full-Stack Developer</p>
+            <div class="mini-list"><span>تمرکز</span><b>Front-End & Back-End</b><span>استک اصلی</span><b>HTML · CSS · JS · Python · Django</b><span>در حال انجام</span><b>ساخت پروژه‌های واقعی</b></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- مهارت‌ها -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">مهارت‌ها</p><h2>چیزهایی که امروز با آن‌ها کار می‌کنم.</h2><p>به‌جای درصدهای غیرواقعی، سطح مهارت را صادقانه و قابل فهم نمایش می‌دهم.</p></div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- پروژه‌ها: مهم‌ترین بخش -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">نمونه‌کارها</p><h2>پروژه‌هایی که در مسیر یادگیری ساخته‌ام.</h2><p>هر پروژه اینجا یک داستان کوتاه دارد: چه چیزی بود، چه مشکلی را حل می‌کرد، من چه ساختم و از آن چه یاد گرفتم.</p></div>
+
+        <aside class="junior-note glass reveal">
+          <span class="junior-note__icon">✦</span>
+          <div><strong>این پورتفولیو عمداً جایگاه Junior من را شفاف می‌کند.</strong><p>من هنوز در حال رشد هستم. به‌جای پنهان کردن مسیر یادگیری، پیشرفت، چالش‌ها و تجربه‌های هر پروژه را نشان می‌دهم.</p></div>
+        </aside>
+
+        <div class="project-tools glass reveal">
+          <label class="search-box"><span>⌕</span><input id="projectSearch" type="search" placeholder="مثلاً: Django، فروشگاه، API..." autocomplete="off"><button id="clearSearch" type="button" aria-label="پاک کردن جستجو">×</button></label>
+          <div class="filters" id="filters" role="group" aria-label="فیلتر پروژه‌ها"></div>
+          <p id="resultsMeta" class="results-meta" aria-live="polite"></p>
+        </div>
+
+        <article class="featured glass reveal" id="featuredProject"></article>
+        <div class="projects-grid" id="projectsGrid"></div>
+        <div class="empty-state glass" id="emptyState" hidden><div>⌕</div><h3>پروژه‌ای پیدا نشد.</h3><p>یک کلمه دیگر امتحان کن یا فیلترها را پاک کن.</p><button class="btn btn--ghost btn--small" id="resetProjects">پاک کردن جستجو و فیلتر</button></div>
+      </div>
+    </section>
+
+    <!-- چه می‌توانم بسازم -->
+    <section class="section" id="build">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">چه می‌توانم بسازم؟</p><h2>کاربرد را ساده توضیح می‌دهم، بدون اصطلاحات پیچیده.</h2><p>اگر برنامه‌نویس نیستی هم باید بتوانی بفهمی چه کاری می‌توانم برای شروع انجام بدهم.</p></div>
+        <div class="build-grid" id="buildGrid"></div>
+      </div>
+    </section>
+
+    <!-- تماس -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">ارتباط</p><h2>اگر ایده‌ای داری، با هم درباره‌اش حرف بزنیم.</h2><p>اطلاعات زیر فعلاً نمونه هستند و بعداً با اطلاعات واقعی خودم جایگزین می‌شوند.</p></div>
+        <div class="contact-grid">
+          <div class="contact-links glass reveal">
+            <a href="mailto:your.email@example.com"><span>✉</span><div><small>ایمیل</small><b>your.email@example.com</b></div>→</a>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener"><span>◉</span><div><small>گیت‌هاب</small><b>github.com/your-username</b></div>↗</a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener"><span>in</span><div><small>لینکدین</small><b>linkedin.com/in/your-profile</b></div>↗</a>
+          </div>
+          <form class="contact-form glass reveal reveal--delay" id="contactForm" novalidate>
+            <label>نام<input id="name" required minlength="2" autocomplete="name"></label><p class="error" id="nameError">نام را وارد کن.</p>
+            <label>ایمیل<input id="email" type="email" required autocomplete="email"></label><p class="error" id="emailError">یک ایمیل معتبر وارد کن.</p>
+            <label>پیام<textarea id="message" required minlength="10" rows="5"></textarea></label><p class="error" id="messageError">پیام باید حداقل ۱۰ کاراکتر باشد.</p>
+            <button class="btn btn--primary magnetic" type="submit">ارسال پیام ←</button><div id="formStatus" class="form-status" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><div><b>متین.</b><span>Junior Full-Stack Developer</span></div><nav><a href="#about">درباره</a><a href="#skills">مهارت‌ها</a><a href="#projects">پروژه‌ها</a><a href="#contact">تماس</a></nav><small>ساخته‌شده با HTML، CSS و JavaScript خالص · ۲۰۲۶</small></div></footer>
+
+  <!-- مودال جزئیات پروژه -->
+  <div class="modal" id="projectModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal__backdrop" data-close></div><div class="modal__panel glass"><button class="modal__close" id="modalClose" type="button" aria-label="بستن">×</button><div id="modalContent"></div></div></div>
+
+  <!-- جستجوی سراسری -->
+  <div class="search-modal" id="searchModal" hidden role="dialog" aria-modal="true" aria-label="جستجوی سایت"><div class="search-modal__backdrop" data-search-close></div><div class="search-modal__panel glass"><div class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="پروژه، مهارت یا بخش موردنظر را بنویس..." autocomplete="off"><button id="globalClose" type="button" aria-label="بستن">×</button></div><p id="searchHint">با ↑ و ↓ جابه‌جا شو و Enter را بزن.</p><ul id="searchResults"></ul></div></div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="بازگشت به بالا">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
